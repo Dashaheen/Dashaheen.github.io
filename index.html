@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -40,22 +41,45 @@
 
 						<!-- Introduction -->
 							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
-										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
+							    <div class="spotlight">
+							        <div class="content">
+							            <header class="major">
+							                <h2>Ipsum sed adipiscing</h2>
+							            </header>
+							            <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+							            <ul class="actions">
+							                <li><a href="generic.html" class="button">Learn More</a></li>
+							            </ul>
+							        </div>
+							        <div class="swiper-container">
+							            <div class="swiper-wrapper">
+							                <div class="swiper-slide">
+							                    <img src="images/pic01.jpg" alt="Image 1" />
+							                </div>
+							                <div class="swiper-slide">
+							                    <img src="images/pic02.jpg" alt="Image 2" />
+							                </div>
+							                <div class="swiper-slide">
+							                    <img src="images/pic03.jpg" alt="Image 3" />
+							                </div>
+							                <div class="swiper-slide">
+							                    <video controls>
+							                        <source src="videos/video1.mp4" type="video/mp4">
+							                        Your browser does not support the video tag.
+							                    </video>
+							                </div>
+							                <div class="swiper-slide">
+							                    <img src="images/pic04.jpg" alt="Image 4" />
+							                </div>
+							            </div>
+							            <!-- Add Pagination -->
+							            <div class="swiper-pagination"></div>
+							            <!-- Add Navigation -->
+							            <div class="swiper-button-next"></div>
+							            <div class="swiper-button-prev"></div>
+							        </div>
+							    </div>
 							</section>
-
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
@@ -179,6 +203,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			<script>
+			    var swiper = new Swiper('.swiper-container', {
+			        loop: true,
+			        pagination: {
+			            el: '.swiper-pagination',
+			            clickable: true,
+			        },
+			        navigation: {
+			            nextEl: '.swiper-button-next',
+			            prevEl: '.swiper-button-prev',
+			        },
+			    });
+			</script>
 
 	</body>
 </html>
